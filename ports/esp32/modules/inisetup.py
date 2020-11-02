@@ -17,8 +17,9 @@ def check_bootsec():
 
 def fs_corrupted():
     import time
+    import machine
 
-    while 1:
+    for i in range(10):
         print(
             """\
 FAT filesystem appears to be corrupted. If you had important data there, you
@@ -28,6 +29,11 @@ by firmware programming).
 """
         )
         time.sleep(3)
+    print("Trying to recreate filesystem...")
+    uos.VfsLfs2.mkfs(bdev)
+    print("Filesystem reset, hopefully?  Restarting...")
+    time.sleep(3)
+    machine.reset()
 
 
 def setup():
