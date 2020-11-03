@@ -1,4 +1,4 @@
-ports/esp32/modules/currentCommitHash.py
+ports/esp32/modules/currentVersionInfo.py
 
 
 # Compiled Sources
