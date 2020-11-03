@@ -1,3 +1,6 @@
+ports/esp32/modules/currentCommitHash.py
+
+
 # Compiled Sources
 ###################
 *.o
