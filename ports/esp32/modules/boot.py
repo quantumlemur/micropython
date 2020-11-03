@@ -1,1 +1,1 @@
-../../../../boot/boot.py
+boot/boot.py
