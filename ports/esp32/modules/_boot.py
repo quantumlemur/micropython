@@ -1,6 +1,9 @@
 import gc
 import uos
 from flashbdev import bdev
+from machine import WDT
+
+WDT(timeout=10*60*1000) # Global watchdog timer @ 10 minutes
 
 try:
     if bdev:
